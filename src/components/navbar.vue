@@ -1,7 +1,7 @@
 <script setup>
 
     let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"))
-    let isNGO = false
+    let isNGO = JSON.parse(localStorage.getItem("isNGO"))
     let isAdmin = true
 
 
@@ -16,8 +16,7 @@
         <v-btn to="/aboutUs">About</v-btn>
         <v-btn v-if="!isLoggedIn" to="/contact">Contact</v-btn>
         <v-spacer/>
-        <v-btn to="/volLogin" v-if="!isLoggedIn" style="background-color: orange; border-radius: 5px; margin-right: 10px;">Volunteer Login</v-btn>
-        <v-btn to="/ngoLogin" v-if="!isLoggedIn" style="background-color: orange; border-radius: 5px;">NGO Login</v-btn>
+        <v-btn to="/login" v-if="!isLoggedIn" style="background-color: orange; border-radius: 5px;">Login</v-btn>
         <v-btn v-if="isLoggedIn" style="border: 3px solid orange; margin-right: 10px;" to="/contact">Contact</v-btn>
         <v-btn v-if="isLoggedIn && !isNGO" style="background-color: orange;" to="/apply">Apply</v-btn>
         <v-btn v-if="isLoggedIn && isNGO" style="background-color: orange;" to="">List Project</v-btn>

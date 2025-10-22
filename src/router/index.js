@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '@/components/home.vue'
 import Projects from '@/components/projects.vue'
-import NGOLogin from '@/components/ngoLogin.vue'
-import VolLogin from '@/components/volLogin.vue'
+import NGOSignUp from '@/components/ngoSignUp.vue'
+import Login from '@/components/login.vue'
 import PastVolunteer from '@/components/pastVolunteer.vue'
 import AboutUs from '@/components/aboutUs.vue'
 import LongListings from '@/components/longListings.vue'
@@ -46,13 +46,13 @@ const router = createRouter({
     {
       name: 'ngoLogin',
       path: '/ngoLogin',
-      component: NGOLogin
+      component: NGOSignUp
     },
 
     {
       name: 'volLogin',
       path: '/volLogin',
-      component: VolLogin
+      component: Login
     },
 
     {
