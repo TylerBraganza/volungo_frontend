@@ -26,7 +26,7 @@ function signUp(){
     try {
         // save data on browser
         localStorage.setItem("signUpData", JSON.stringify(signUpData));
-        router.push('/volLogin')
+        router.push('/login')
 
     } catch(err) {
         console.error('Sign Up process failed', err)
@@ -70,10 +70,10 @@ function signUp(){
                         required
                     ></v-text-field>
                     <v-card-actions>
-                        <v-btn variant="elevated" @click="signUp()" style="background-color: orange; margin-left: 230px;">SIGN UP</v-btn>
+                        <v-btn variant="elevated" @click="signUp()" style="background-color: #2BB673; margin-left: 230px;">SIGN UP</v-btn>
                     </v-card-actions>
                     <v-card-text style="font-family: 'Courier New', Courier, monospace;">Already registered?
-                        <router-link to="/volLogin">Login</router-link>
+                        <router-link to="/login">Login</router-link>
                     </v-card-text>
 
                 </v-card>

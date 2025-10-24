@@ -11,7 +11,7 @@ const projectCategory = projectCategoryStore.projectCategory
 
 <style>
 .hover-card:hover .hover-text {
-color: rgb(231, 122, 68); /* or any color you want */
+color: #2BB673; /* or any color you want */
 transition: color 0.3s ease;
 }
 
@@ -48,7 +48,7 @@ transition: color 0.3s ease;
         v-for="(item, index) in projectCategory":key="item.id" class="mb-6">
         <v-col cols="12">
           <router-link :to="item.link" class="card-link">
-            <v-card class="hover-card" style="border: 2px solid black;">
+            <v-card class="hover-card" style="border: 2px solid #007CF0;">
               <v-row :class="index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'" align="center">
                 <v-col cols="12" md="6">
                   <v-img :src="item.image" height="250px" cover></v-img>

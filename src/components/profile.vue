@@ -37,20 +37,18 @@ function changeProfile(){
     <v-container>
         <v-row>
             <v-col md="4">
-                <v-card style="border: 2px solid blue;" height="280px">
-                    <!-- Larger Avatar -->
+                <v-card style="border: 2px solid #007CF0;" height="280px">
                         <v-img src='/images/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg'></v-img>
                 </v-card>
             </v-col>
             <v-col md="8">
-                <v-card class="pa-6" justify="center" style="font-family: 'Courier New', Courier, monospace; border: 2px solid orange; height: 280px;">
+                <v-card class="pa-6" justify="center" style="font-family: 'Courier New', Courier, monospace; border: 2px solid #2BB673; height: 280px;">
                     <h2>Name: </h2>
                     <h2>Email: </h2>
                     <h2>Phone: </h2>
                     <h2>Hours Vounteered: </h2>
-                    <v-btn style="border: 2px solid orange; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 10px;">🖨️ Print Certificate</v-btn>
+                    <v-btn style="border: 2px solid #2BB673; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 10px;">🖨️ Print Certificate</v-btn>
                     <v-spacer/>
-                    <v-btn style="background-color: orange; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 15px;" class="justify-end" @click="logout()">Logout</v-btn>
                 </v-card>
             </v-col>
         </v-row>

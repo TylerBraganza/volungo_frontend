@@ -26,6 +26,8 @@ import environmentalConservation from '@/components/projectCategoriesIndPages/en
 import ngoImpact from '@/components/projectCategoriesIndPages/ngoImpact.vue'
 import specialNeeds from '@/components/projectCategoriesIndPages/specialNeeds.vue'
 import teaching from '@/components/projectCategoriesIndPages/teaching.vue'
+import SignUp from '@/components/signUp.vue'
+import ListProjects from '@/components/listProjects.vue'
 
 
 const router = createRouter({
@@ -45,13 +47,13 @@ const router = createRouter({
 
     {
       name: 'ngoLogin',
-      path: '/ngoLogin',
+      path: '/ngoSignUp',
       component: NGOSignUp
     },
 
     {
-      name: 'volLogin',
-      path: '/volLogin',
+      name: 'Login',
+      path: '/login',
       component: Login
     },
 
@@ -186,6 +188,18 @@ const router = createRouter({
       path: '/teaching',
       component: teaching
     },
+
+    {
+      name: 'signUp',
+      path: '/signUp',
+      component: SignUp
+    },
+
+    {
+      name: 'listProjects',
+      path: '/listProjects',
+      component: ListProjects
+    }
   ],
 })
 

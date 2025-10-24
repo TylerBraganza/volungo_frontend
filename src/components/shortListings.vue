@@ -60,7 +60,7 @@ const normalizeDuration = (duration) => {
                     <v-card-subtitle>by: {{ item.organization }}</v-card-subtitle>
                     <v-card-subtitle>duration: {{ item.duration }}</v-card-subtitle>
                     <v-card-actions class="d-flex justify-space-between align-center ma-2 pa-2" style="font-family: 'Courier New', Courier, monospace;">
-                        <v-btn @click="view(item)" style="background-color: orange;">View</v-btn>
+                        <v-btn @click="view(item)" style="background-color: #2BB673;">View</v-btn>
                         <v-chip class="ma-2 pa-2">Volunteers: {{ item.capacity }}</v-chip>
                     </v-card-actions>
                 </v-card>

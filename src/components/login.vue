@@ -58,10 +58,10 @@ function login(){
                         required
                     ></v-text-field>
                     <v-card-actions>
-                        <v-btn variant="elevated" @click="login()" style="background-color: orange; margin-left: 230px;">LOGIN</v-btn>
+                        <v-btn variant="elevated" @click="login()" style="background-color: #2BB673; margin-left: 230px;">LOGIN</v-btn>
                     </v-card-actions>
                     <v-card-text style="font-family: 'Courier New', Courier, monospace;">Don't have an account?
-                        <router-link to="/volSignUp">SignUp</router-link>
+                        <router-link to="/signUp">SignUp</router-link>
                     </v-card-text>
 
                 </v-card>

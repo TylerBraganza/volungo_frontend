@@ -1,26 +1,21 @@
 <script setup>
 
     let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"))
-    let isNGO = JSON.parse(localStorage.getItem("isNGO"))
+    let isNGO = true
     let isAdmin = true
 
 
 </script>
 
 <template>
-    <v-app-bar color="white">
-        <router-link to="/" style="color: blue; text-decoration: none; margin-left: 20px; margin-right: 30px;"><v-app-bar-title style="font-size: 190%; font-family:'Courier New', Courier, monospace;">volungo</v-app-bar-title></router-link>
-        <v-btn to="/projects">Projects</v-btn>
-        <v-btn to="/pastVolunteer" v-if="isLoggedIn && !isNGO">Past Volunteers</v-btn>
-        <v-btn to="/listings" v-if="isLoggedIn && isNGO">Your Listings</v-btn>
-        <v-btn to="/aboutUs">About</v-btn>
-        <v-btn v-if="!isLoggedIn" to="/contact">Contact</v-btn>
+    <v-app-bar app color="white" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <router-link to="/" style="color: #007CF0; text-decoration: none; margin-left: 20px; margin-right: 30px;"><v-app-bar-title style="font-size: 190%; font-family:'Courier New', Courier, monospace;">volungo</v-app-bar-title></router-link>
+        <v-btn style="margin-right: 10px;" to="/contact" v-if="!isLoggedIn">Contact Us</v-btn>
         <v-spacer/>
-        <v-btn to="/login" v-if="!isLoggedIn" style="background-color: orange; border-radius: 5px;">Login</v-btn>
-        <v-btn v-if="isLoggedIn" style="border: 3px solid orange; margin-right: 10px;" to="/contact">Contact</v-btn>
-        <v-btn v-if="isLoggedIn && !isNGO" style="background-color: orange;" to="/apply">Apply</v-btn>
-        <v-btn v-if="isLoggedIn && isNGO" style="background-color: orange;" to="">List Project</v-btn>
-        <v-btn icon v-if="isLoggedIn" to="/profile"><v-icon>mdi-account</v-icon></v-btn>
+        <v-btn style="background-color: #007CF0; margin-right: 10px;" v-if="!isLoggedIn" to="ngoSignUp">NGO SignUp</v-btn>
+        <v-btn style="background-color: #007CF0; margin-right: 10px;" v-if="!isLoggedIn" to="/volSignUp">Volunteer SignUp</v-btn>
+        <v-btn style="margin-right: 10px;" to="/contact" v-if="isLoggedIn">Contact Us</v-btn>
+        <v-btn style="border: 2px solid #007CF0; margin-right: 10px;" v-if="isLoggedIn">Logout</v-btn>
     </v-app-bar>
 </template>
 

@@ -7,7 +7,7 @@ const projectItem = projectStore.selectedProjectItem
 
 const showSuccessDialog = ref(false)
 
-
+let isNGO = true
 
 const hasApplied = computed(() => {
     const existingApplication = JSON.parse(localStorage.getItem("application")) || []
@@ -55,18 +55,18 @@ const hasApplied = computed(() => {
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="orange" @click="showSuccessDialog = false">OK</v-btn>
+          <v-btn color="#2BB673" @click="showSuccessDialog = false">OK</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
 
     <v-container v-if="projectItem">
       <v-card-actions style="margin-bottom: 30px;">
-        <v-btn to="/projects" style="background-color: orange;"><v-icon icon="mdi-arrow-left"/> Back to Projects</v-btn>
+        <v-btn to="/projects" style="background-color: #2BB673;"><v-icon icon="mdi-arrow-left"/> Back to Projects</v-btn>
       </v-card-actions>
       <v-row>
         <v-col md="6">
-          <v-card class="pa-0" style="border: 2px solid blue;" height="500">
+          <v-card class="pa-0" style="border: 2px solid #007CF0;" height="500">
             <v-img :src="projectItem.image" height="500" width="600px" cover></v-img>
           </v-card>
         </v-col>
@@ -87,8 +87,9 @@ const hasApplied = computed(() => {
               Category: {{ projectItem.category }}
             </v-card-text>
             <v-card-actions>
-              <v-btn color="grey" variant="elevated" disabled v-if="hasApplied">Applied</v-btn>
-              <v-btn color="orange" variant="elevated" @click="apply" v-else>Apply</v-btn>
+              <v-btn variant="elevated" disabled v-if="isNGO"></v-btn>
+              <v-btn color="grey" variant="elevated" disabled v-else-if="hasApplied">Applied</v-btn>
+              <v-btn color="#2BB673" variant="elevated" @click="apply" v-else>Apply</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -96,7 +97,7 @@ const hasApplied = computed(() => {
     </v-container>
   
     <v-container v-else>
-      <v-alert type="info" color="orange">
+      <v-alert type="info" color="#2BB673">
         No project selected or still loading.
       </v-alert>
     </v-container>

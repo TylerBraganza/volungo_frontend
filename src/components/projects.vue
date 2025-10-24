@@ -92,6 +92,7 @@ function view(project){
         prepend-inner-icon="mdi-magnify"
         variant="solo"
         class="custom-rounded"
+        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
         clearable/>
       </v-col>
       <v-col cols="12" md="3">
@@ -99,6 +100,7 @@ function view(project){
         v-model="selectedCategory"
         :items="categories"
         label="Filter by category"
+        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
         clearable/>
       </v-col>
       <v-col cols="12" md="3">
@@ -106,6 +108,7 @@ function view(project){
         v-model="selectedDuration"
         :items="durationBuckets"
         label="Filter by duration"
+        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
         clearable/>
       </v-col>
     </v-row>
@@ -121,7 +124,7 @@ function view(project){
               :src="item.image"
               height="250"
               cover
-              style="border: 2px solid blue;"
+              style="border: 2px solid #007CF0;"
             ></v-img>
 
             <v-row>
@@ -145,7 +148,7 @@ function view(project){
             <v-card-subtitle>duration: {{ item.duration }}</v-card-subtitle>
   
             <v-card-actions class="d-flex justify-space-between align-center ma-2 pa-2" style="font-family: 'Courier New', Courier, monospace;">
-              <v-btn @click="view(item)" style="background-color: orange;">View</v-btn>
+              <v-btn @click="view(item)" style="background-color: #2BB673;">View</v-btn>
               <v-chip class="ma-2 pa-2">
                 Volunteers:{{ item.capacity }}
               </v-chip>

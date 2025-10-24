@@ -17,7 +17,7 @@ const selectItem = (item) => {
 
 <style>
 .hover-card:hover .hover-text {
-  color: blue; /* or any color you want */
+  color:  #2BB673; /* or any color you want */
   transition: color 0.3s ease;
 }
 
@@ -47,7 +47,6 @@ const selectItem = (item) => {
 .footer-links a {
     font-size: 120%;
     font-family: 'Courier New', Courier, monospace;
-    /* text-decoration: none; */
     color: black;
 }
 </style>
@@ -55,21 +54,20 @@ const selectItem = (item) => {
 <template>
     <v-row id="home">
         <v-col cols="12" >
-            <v-img src="/images/joel-muniz-A4Ax1ApccfA-unsplash.jpg" gradient="to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.7)">
+            <v-row gradient="to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.9)" style="margin-top: 20px; margin-bottom: 20px;">
                 <v-row justify="center">
-                    <v-card class="text-center pa-6" style="font-family:'Courier New', Courier, monospace; color: white; text-decoration: none; font-size: 300%; margin-top: 100px; background-color: rgba(255, 255, 255, 0.4); border: 2px solid black;">
-                        <h1 style="font-size: 300%;">volungo</h1>
+                    <v-card class="text-center pa-6" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 300%; margin-top: 20px; background-color: rgba(255, 255, 255, 0.4); border: 2px solid #2BB673;">
+                        <h1 style="font-size: 300%; color: #007CF0;">volungo</h1>
                         <h4>Making volunteering accessible to everyone.</h4>
                         <h4>Become a volunteer today.</h4>
                     </v-card>
-                    <v-card class="text-center pa-6" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 150%; margin-top: 20px; background-color: rgba(255, 255, 255, 1); border: 3px solid blue;">
+                    <v-card class="text-center pa-6" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 150%; margin-top: 20px; background-color: rgba(255, 255, 255, 1); border: 3px solid #2BB673;">
                         <h1>Which type of volunteering are you looking for?</h1>
                         <v-row class="text-center pa-6 ">
                             <v-col cols="12" md="6">
                                 <router-link to="/shortListings" style="text-decoration: none;" class="card-link">
-                                    <v-card class="text-center pa-6 hover-card" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 80%; background-color: rgba(255, 255, 255, 1); height: 200px; border: 3px solid orange;">
+                                    <v-card class="text-center pa-6 hover-card" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 80%; background-color: rgba(255, 255, 255, 1); height: 200px; border: 3px solid #007CF0;">
                                         <h1 class="hover-text">Short Term Volunteering</h1>
-                                        <!-- <h4>Find exciting short-term volunteering—from a few hours in a day to light weekly roles. Flexible, impactful, and perfect for busy changemakers.</h4> -->
                                         <h2>1 day - 2 weeks</h2>
                                         <h3>short hours each day + local only</h3>
                                     </v-card>
@@ -77,23 +75,22 @@ const selectItem = (item) => {
                             </v-col>
                             <v-col cols="12" md="6">
                                 <router-link to="/longListings" style="text-decoration: none;" class="card-link">
-                                    <v-card class="text-center pa-6 hover-card" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 80%; background-color: rgba(255, 255, 255, 1); height: 200px; border: 3px solid orange;">
+                                    <v-card class="text-center pa-6 hover-card" style="font-family:'Courier New', Courier, monospace; color: black; text-decoration: none; font-size: 80%; background-color: rgba(255, 255, 255, 1); height: 200px; border: 3px solid #007CF0;">
                                         <h1 class="hover-text">Long Term Volunteering</h1>
-                                        <!-- <h4>Find exciting long-term volunteering—from weeks to months, even abroad. Deeply immersive, impactful, and perfect for changemakers seeking lasting contribution.</h4> -->
-                                         <h2>> 2 weeks</h2>
-                                         <h3>long hours + local or international</h3>
+                                        <h2>> 2 weeks</h2>
+                                        <h3>long hours + local or international</h3>
                                     </v-card> 
                                 </router-link>   
                             </v-col>
                         </v-row>
                     </v-card>
                 </v-row>
-            </v-img>
+            </v-row>
         </v-col>
     </v-row>
-    <v-row style="background-color: #222;">
+    <v-row style="background-color: #2E2E2E;">
         <v-container class="text-center">
-            <h2 style="color: white; font-family: 'Courier New', Courier, monospace; font-size: 300%;">Where would you like to volunteer?</h2>
+            <h2 style="color: whitesmoke; font-family: 'Courier New', Courier, monospace; font-size: 340%;">Where would you like to volunteer?</h2>
             <v-slide-group
             show-arrows
             class="pa-4"
@@ -115,7 +112,7 @@ const selectItem = (item) => {
                     width="329"
                     @click="selectItem(item)"
                     elevation="2"
-                    style="border: 2px solid blue;">
+                    style="border: 2px solid #007CF0;">
                 
                         <v-img
                         :src="item.image"
@@ -131,10 +128,8 @@ const selectItem = (item) => {
                                 width: 100%;
                                 padding: 16px;
                                 box-sizing: border-box;">
-                                <v-card class="text-center ma-4" elevation="4" color="rgba(0,0,0,0.7)">
-                                    <v-card-title class="text-wrap text-center" style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 170%;">
-                                        {{ item.name }}
-                                    </v-card-title>
+                                <v-card class="text-center ma-4" elevation="4" color="rgba(0, 0, 0, 0.7)">
+                                    <v-card-title class="text-wrap text-center" style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 170%;"><b>{{ item.name }}</b></v-card-title>
                                 </v-card>
                         </div>
                         </v-img>
@@ -143,15 +138,15 @@ const selectItem = (item) => {
               </v-slide-group-item>
             </v-slide-group>
             <v-card-actions class="column-flex justify-center">
-              <v-btn to="/projectCategory" style="background-color: white; color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 130%;">Explore All Projects</v-btn>
+              <v-btn to="/projectCategory" style="background-color: white; color: #2E2E2E; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 130%;"><b>Explore All Projects</b></v-btn>
             </v-card-actions>
           </v-container>
     </v-row>
-    <v-footer style="height: 200px;" padless>       
+    <v-footer style="height: 200px; border: #007CF0;" padless elevation="10">       
         <v-row align="center" justify="space-between">
             <v-col cols="12" md="4" class="d-flex flex-column align-center">
                 <div class="mb-2">
-                    <span style="font-size: 400%; font-family: 'Courier New', Courier, monospace; color: blue;">volungo</span>
+                    <span style="font-size: 400%; font-family: 'Courier New', Courier, monospace; color: #007CF0;">volungo</span>
                 </div>
                 <div class="d-flex justify-center">
                     <v-btn icon href="" target="_blank" class="centered-icon-btn"><v-icon style="color: black;">mdi-facebook</v-icon></v-btn>
