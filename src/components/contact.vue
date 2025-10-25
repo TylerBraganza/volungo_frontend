@@ -27,9 +27,9 @@
   
         <v-col cols="12" md="6">
           <h3>Follow Us</h3>
-          <v-btn icon><v-icon color="blue darken-2">mdi-facebook</v-icon></v-btn>
-          <v-btn icon><v-icon color="light-blue">mdi-twitter</v-icon></v-btn>
-          <v-btn icon><v-icon color="red">mdi-instagram</v-icon></v-btn>
+          <v-btn icon style="margin-right: 5px;"><v-icon color="blue darken-2">mdi-facebook</v-icon></v-btn>
+          <v-btn icon style="margin-right: 5px;"><v-icon color="light-blue">mdi-twitter</v-icon></v-btn>
+          <v-btn icon style="margin-right: 5px;"><v-icon color="red">mdi-instagram</v-icon></v-btn>
         </v-col>
       </v-row>
     </v-container>

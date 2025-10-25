@@ -7,8 +7,6 @@ const projectItem = projectStore.selectedProjectItem
 
 const showSuccessDialog = ref(false)
 
-let isNGO = true
-
 const hasApplied = computed(() => {
     const existingApplication = JSON.parse(localStorage.getItem("application")) || []
     return existingApplication.some(app => app.projectItem?.id === projectItem.id)

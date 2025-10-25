@@ -18,7 +18,7 @@ watch(highContrast, (enabled) => {
   <!-- Floating Button (outside layout flow) -->
   <div class="accessibility-fab">
     <v-btn icon @click="dialog = true" aria-label="Accessibility Settings">
-      <v-icon>mdi-access-point</v-icon>
+      <v-icon>mdi-human</v-icon>
     </v-btn>
   </div>
 
