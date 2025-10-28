@@ -18,10 +18,11 @@ function login(){
         //get user data
         let user = JSON.parse(localStorage.getItem("signUpData"));
         //check user details
-        if(email.value = user.email && password.value == user.password){
-            localStorage.setItem( "isLoggedIn", true );
-            router.push('/')
-
+        if(email.value === user.email && password.value === user.password){
+            localStorage.setItem("isLoggedIn", "true");
+            router.push('/').then(() => {
+            window.location.reload();
+    })
         }else{
             console.log("Invalid credentials")
         }

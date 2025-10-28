@@ -50,10 +50,23 @@ watch(highContrast, (enabled) => {
 
 <style>
 /* Global styles — not scoped */
-body.high-contrast {
-  background-color: #000;
-  color: #fff;
+body.high-contrast,
+body.high-contrast .v-card,
+body.high-contrast .v-btn,
+body.high-contrast .v-switch,
+body.high-contrast .v-slider,
+body.high-contrast .v-dialog,
+body.high-contrast .v-icon,
+body.high-contrast .v-card-title,
+body.high-contrast .v-card-text {
+  background-color: #000 !important;
+  color: #fff !important;
 }
+
+body.high-contrast .v-btn {
+  border: 1px solid #fff !important;
+}
+
 
 .accessibility-fab {
   position: fixed;
